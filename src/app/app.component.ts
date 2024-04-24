@@ -8,7 +8,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   template: ` <h1>Welcome to {{ title }}!</h1>
     @for (title of productTitles; track title) {
     <p>
-      <a [routerLink] = "['details', $index]" >{{ title }}</a>
+      <a [routerLink] = "['details', $index]" | {{$index}} >{{ title }}</a>
     </p>
 
     }
